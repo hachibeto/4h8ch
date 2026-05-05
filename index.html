@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hachibeto — Music artist shaped by the geometry of eight. Sound, shape, and the infinite loop." />
+  <title>HACHIBETO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#hero">HACHI<span>八</span>BETO</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas class="hero-bg-canvas" id="heroBg"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Artist · Sound · Shape · ∞</p>
+      <h1 class="hero-title">HACHI<span class="eight">8</span>ETO</h1>
+      <p class="hero-sub">Music shaped by the infinite loop — where the curve never breaks</p>
+      <a href="#gallery" class="hero-cta">Explore the work</a>
+    </div>
+    <div class="scroll-indicator">Scroll</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-left fade-in">
+      <p class="section-label">∞ — About</p>
+      <h2 class="about-title">THE LOOP<br>NEVER<br>ENDS</h2>
+      <p class="about-body">
+        <strong>Hachibeto</strong> is a music artist whose identity is woven into the geometry of eight —
+        the endless curve, the twin circles, the infinity loop. Every track is a journey from one lobe
+        to the other and back, <strong>a sound that turns in on itself</strong> and resurfaces changed.<br><br>
+        Drawing on the visual tension of curves that cross themselves — the figure 8, the ∞, the X —
+        Hachibeto builds sonic worlds that feel simultaneously grounded and unresolved,
+        <strong>always mid-loop</strong>.
+      </p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-num">8</div>
+          <div class="stat-label">The number</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">The shape</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">×</div>
+          <div class="stat-label">The cross</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">↺</div>
+          <div class="stat-label">The return</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right fade-in">
+      <svg class="curve-art" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.08" stroke="#e8f5f2" stroke-width="60" fill="none">
+          <path d="M200,200 C200,100 350,100 350,200 C350,300 200,300 200,200 C200,100 50,100 50,200 C50,300 200,300 200,200"/>
+        </g>
+        <g opacity="0.2" stroke="#2eedb5" stroke-width="18" fill="none">
+          <path d="M200,200 C200,120 340,120 340,200 C340,280 200,280 200,200 C200,120 60,120 60,200 C60,280 200,280 200,200">
+            <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="18s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        <g opacity="0.85" stroke="#6fffd4" stroke-width="2.5" fill="none">
+          <path d="M200,200 C200,130 330,130 330,200 C330,270 200,270 200,200 C200,130 70,130 70,200 C70,270 200,270 200,200">
+            <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="-360 200 200" dur="12s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        <text x="200" y="220" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="160" fill="#2eedb510">8</text>
+        <circle cx="200" cy="200" r="5" fill="#6fffd4">
+          <animate attributeName="r" values="4;7;4" dur="2.4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0.5;1" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+        <line x1="150" y1="150" x2="250" y2="250" stroke="#2eedb5" stroke-width="1" opacity="0.35"/>
+        <line x1="250" y1="150" x2="150" y2="250" stroke="#2eedb5" stroke-width="1" opacity="0.35"/>
+      </svg>
+    </div>
+  </section>
+
+  <div class="section-divider">
+    <div class="divider-line"></div>
+    <div class="divider-symbol">8</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="gallery-header fade-in">
+      <span class="section-label">∞ — The Work</span>
+      <h2>SOUNDS &<br>SHAPES</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item fade-in">
+        <canvas id="c1"></canvas>
+        <div class="gallery-item-label">Loop I — Infinite drift</div>
+      </div>
+      <div class="gallery-item fade-in">
+        <canvas id="c2"></canvas>
+        <div class="gallery-item-label">Loop II — The crossing</div>
+      </div>
+      <div class="gallery-item fade-in">
+        <canvas id="c3"></canvas>
+        <div class="gallery-item-label">Loop III — Eight paths</div>
+      </div>
+      <div class="gallery-item fade-in">
+        <canvas id="c4"></canvas>
+        <div class="gallery-item-label">Loop IV — X marks</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" style="padding-top: 3rem;">
+    <div class="divider-line"></div>
+    <div class="divider-symbol">∞</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <span class="section-label">∞ — Connect</span>
+    <h2 class="fade-in">LET'S<br>LOOP IN</h2>
+    <p class="fade-in">Bookings, collabs, and conversations — reach out below. The curve always finds its way back.</p>
+    <div class="contact-links fade-in">
+      <a href="mailto:hachibeto@email.com" class="contact-link">
+        <span class="link-icon">✉</span> Email
+      </a>
+      <a href="https://tiktok.com/@hachibeto" target="_blank" rel="noopener" class="contact-link">
+        <span class="link-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+          </svg>
+        </span> TikTok
+      </a>
+      <a href="https://instagram.com/hachibeto" target="_blank" rel="noopener" class="contact-link">
+        <span class="link-icon">◈</span> Instagram
+      </a>
+      <a href="https://open.spotify.com/artist/hachibeto" target="_blank" rel="noopener" class="contact-link">
+        <span class="link-icon">⊕</span> Spotify
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>HACHI<span class="accent">八</span>BETO</span>
+    <span>© 2025 — All curves reserved</span>
+    <span class="accent">∞ 8 × ∞</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
